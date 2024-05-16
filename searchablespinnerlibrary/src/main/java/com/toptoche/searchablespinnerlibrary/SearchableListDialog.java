@@ -2,7 +2,6 @@ package com.toptoche.searchablespinnerlibrary;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -17,6 +16,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
+
+import androidx.fragment.app.DialogFragment;
 
 import java.io.Serializable;
 import java.util.List;
