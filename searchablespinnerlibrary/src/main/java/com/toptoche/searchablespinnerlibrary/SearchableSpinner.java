@@ -30,6 +30,16 @@ public class SearchableSpinner extends AppCompatSpinner implements View.OnTouchL
     private String _strHintText;
     private boolean _isFromInit;
 
+    public interface Listener{
+        void onShow();
+    }
+
+    private Listener listener;
+
+    public void setListener(Listener listener){
+        this.listener = listener;
+    }
+
     public SearchableSpinner(Context context) {
         super(context);
         this._context = context;
@@ -75,6 +85,7 @@ public class SearchableSpinner extends AppCompatSpinner implements View.OnTouchL
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
+        if (listener != null) listener.onShow();
         if (_searchableListDialog.isAdded()) {
             return true;
         }
